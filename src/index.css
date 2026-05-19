@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  /* Yellows */
+  --color-yellow-50: oklch(98.7% .026 102.212);
+  --color-yellow-200: oklch(94.5% .129 101.54);
+  --color-yellow-400: oklch(85.2% .199 91.936);
+  --color-yellow-500: oklch(79.5% .184 86.047);
+  --color-yellow-600: oklch(68.1% .162 75.834);
+  --color-yellow-700: oklch(55.4% .135 66.442);
+  --color-yellow-800: oklch(47.6% .114 61.907);
+  
+  /* Greens */
+  --color-green-50: oklch(98.2% .018 155.826);
+  --color-green-100: oklch(96.2% .044 156.743);
+  --color-green-500: oklch(72.3% .219 149.579);
+  --color-green-600: oklch(62.7% .194 149.214);
+  --color-green-700: oklch(52.7% .154 150.069);
+  
+  /* Grays */
+  --color-gray-50: oklch(98.5% .002 247.839);
+  --color-gray-100: oklch(96.7% .003 264.542);
+  --color-gray-200: oklch(92.8% .006 264.531);
+  --color-gray-300: oklch(87.2% .01 258.338);
+  --color-gray-400: oklch(70.7% .022 261.325);
+  --color-gray-500: oklch(55.1% .027 264.364);
+  --color-gray-600: oklch(44.6% .03 256.802);
+  --color-gray-700: oklch(37.3% .034 259.733);
+  --color-gray-800: oklch(27.8% .033 256.848);
+  --color-gray-900: oklch(21% .034 264.665);
+  
+  /* Brand (Emerald) */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  
+  --radius-md: .375rem;
+  --radius-lg: .5rem;
+  --radius-xl: .75rem;
+  --radius-2xl: 1rem;
+  
+  --default-font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
