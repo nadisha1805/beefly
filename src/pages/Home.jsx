@@ -9,12 +9,22 @@ import CTA from '../components/CTA';
 const Home = () => {
   return (
     <>
+
       <Hero />
-      <ComparisonTable />
+
+      {/* COMPARISON SECTION */}
+      <section id="comparison">
+        <ComparisonTable />
+      </section>
+
       <ProviderCards />
+
       <LatestGuides />
+
       <TrustFeatures />
+
       <CTA />
+
     </>
   );
 };

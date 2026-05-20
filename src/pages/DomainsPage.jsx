@@ -3,7 +3,7 @@ import { useState } from "react";
 const providers = [
   {
     name: "Namecheap",
-    logo: "🐱",
+    logo: "/logos/namecheap.png",
     rating: 4.8,
     badge: "Best Overall",
     price: "₹89/yr",
@@ -23,7 +23,7 @@ const providers = [
 
   {
     name: "Cloudflare",
-    logo: "☁️",
+    logo: "/logos/cloudflare.png",
     rating: 4.7,
     badge: "Best for Developers",
     price: "₹750/yr",
@@ -43,7 +43,7 @@ const providers = [
 
   {
     name: "GoDaddy",
-    logo: "🤠",
+    logo: "/logos/godaddy.png",
     rating: 4.2,
     badge: "Most Popular",
     price: "₹99/yr",
@@ -208,9 +208,11 @@ export default function DomainsPage() {
 
                 </div>
 
-                <span className="text-4xl">
-                  {p.logo}
-                </span>
+                <img
+                    src={p.logo}
+                    alt={p.name}
+                    className="h-12 object-contain"
+                 />
 
               </div>
 

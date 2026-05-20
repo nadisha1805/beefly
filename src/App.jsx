@@ -13,8 +13,12 @@ import ReviewsPage from './pages/ReviewsPage';
 import ResourcesPage from './pages/ResourcesPage';
 import TopPickPage from './pages/TopPickPage';
 import BlogPage from './pages/BlogPage';
+import BlogDetailsPage from './pages/BlogDetailsPage';
 import DisclosurePage from './pages/DisclosurePage';
-
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiesPolicy from './pages/CookiesPolicy';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 function App() {
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -39,7 +43,17 @@ function App() {
 
         <Route path="/blog" element={<BlogPage />} />
 
+        <Route path="/blog/:id" element={<BlogDetailsPage />} />
+
         <Route path="/disclosure" element={<DisclosurePage />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+        <Route path="/cookies-policy" element={<CookiesPolicy />} />
+
+        <Route path="/about" element={<AboutPage />} />
+        
+        <Route path="/contact" element={<ContactPage />} />
 
       </Routes>
 
