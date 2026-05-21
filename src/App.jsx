@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -21,6 +22,11 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import TermsPage from './pages/TermsPage';
 function App() {
+  const location = useLocation();
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, [location.pathname]);
   return (
     <div className="bg-gray-50 min-h-screen">
 

@@ -3,108 +3,6 @@ import { Star, Check, Info } from 'lucide-react';
 
 const providers = [
   {
-    name: 'IONOS',
-    logo: '/logos/ionos.png',
-    price: '$1/yr',
-    rating: '4.2',
-    category: 'Domains',
-    description: 'Very cheap first-year offers for domains and hosting.',
-    features: [
-      'Personal Consultant',
-      '2 GB Email',
-      '1 Wildcard SSL',
-      '24/7 Support',
-    ],
-    best: true,
-    link: 'https://www.ionos.com',
-  },
-
-  {
-    name: 'Bluehost',
-    logo: '/logos/bluehost.png',
-    price: '$2.95/mo',
-    rating: '4.7',
-    category: 'Hosting',
-    description:
-      'Best overall hosting for beginners. Recommended by WordPress.org.',
-    features: [
-      'Free Domain for 1st Year',
-      '1-Click WordPress',
-      'Free SSL',
-      '24/7 Support',
-    ],
-    link: 'https://www.bluehost.com',
-  },
-
-  {
-    name: 'Hostinger',
-    logo: '/logos/hostinger.png',
-    price: '$1.99/mo',
-    rating: '4.8',
-    category: 'Hosting',
-    description:
-      'Unbeatable price to performance ratio with custom hPanel.',
-    features: [
-      'Managed WordPress',
-      'Weekly Backups',
-      'Free Migration',
-      'Unlimited SSL',
-    ],
-    link: 'https://www.hostinger.com',
-  },
-
-  {
-    name: 'SiteGround',
-    logo: '/logos/siteground.png',
-    price: '$3.99/mo',
-    rating: '4.9',
-    category: 'Hosting',
-    description:
-      'Premium managed WordPress hosting with Google Cloud infrastructure.',
-    features: [
-      'Google Cloud',
-      'SuperCacher',
-      'Daily Backups',
-      'Top-tier Support',
-    ],
-    link: 'https://www.siteground.com',
-  },
-
-  {
-    name: 'A2 Hosting',
-    logo: '/logos/a2.png',
-    price: '$2.99/mo',
-    rating: '4.5',
-    category: 'Hosting',
-    description:
-      'Known for their high-speed Turbo Servers and developer-friendly features.',
-    features: [
-      'Turbo Servers (20x faster)',
-      'Free Migration',
-      'Anytime Money Back',
-      '99.9% Uptime',
-    ],
-    link: 'https://www.a2hosting.com',
-  },
-
-  {
-    name: 'DreamHost',
-    logo: '/logos/dreamhost.png',
-    price: '$2.59/mo',
-    rating: '4.6',
-    category: 'Hosting',
-    description:
-      'Reliable, independent hosting with a 97-day money-back guarantee.',
-    features: [
-      'Address Monthly Billing',
-      'Unlimited Traffic',
-      'Free Domain',
-      'Automated Backups',
-    ],
-    link: 'https://www.dreamhost.com',
-  },
-
-  {
     name: 'InMotion',
     logo: '/logos/inmotion.png',
     price: '$2.29/mo',
@@ -118,24 +16,8 @@ const providers = [
       'Unlimited Bandwidth',
       'Security Suite',
     ],
+    best: true,
     link: 'https://www.inmotionhosting.com',
-  },
-
-  {
-    name: 'GreenGeeks',
-    logo: '/logos/GreenGeeks.png',
-    price: '$2.95/mo',
-    rating: '4.7',
-    category: 'Hosting',
-    description:
-      'Eco-friendly hosting that matches 300% of energy use with renewables.',
-    features: [
-      '300% Green Energy',
-      'Free CDN',
-      'Free Nightly Backup',
-      'LSCache',
-    ],
-    link: 'https://www.greengeeks.com',
   },
 
   {
@@ -155,38 +37,28 @@ const providers = [
     link: 'https://www.cloudways.com',
   },
 
-  {
-    name: 'Kinsta',
-    logo: '/logos/kinsta.png',
-    price: '$30/mo',
-    rating: '4.9',
-    category: 'Hosting',
-    description:
-      'Premium managed WordPress hosting powered by Google Cloud Platform with enterprise-grade performance.',
-    features: [
-      'Google Cloud Platform C3D',
-      'Automatic Daily Backups',
-      'Free Cloudflare CDN',
-      'Free SSL & SSH Access',
-    ],
-    link: 'https://kinsta.com',
-  },
+  
+
+
+  
 ];
 
-const HostingPage = () => {
+const VpsPage = () => {
   return (
     <div className="bg-[#f5f7f9] min-h-screen">
 
       {/* HERO */}
       <section className="py-24 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 text-center">
+
           <h1 className="text-6xl font-extrabold text-[#0f172a] mb-6">
-            All Web Hosting Providers
+            VPS & Cloud Hosting
           </h1>
 
           <p className="text-2xl text-gray-500">
-            Complete list of reliable web hosting companies.
+            High-performance servers for growing applications.
           </p>
+
         </div>
       </section>
 
@@ -202,11 +74,18 @@ const HostingPage = () => {
           <table className="w-full">
 
             <thead className="border-b border-gray-200">
-              <tr>
-                <th className="text-left p-8 text-gray-500">FEATURE</th>
 
-                {providers.slice(0, 3).map((provider) => (
-                  <th key={provider.name} className="p-8 text-center">
+              <tr>
+
+                <th className="text-left p-8 text-gray-500">
+                  FEATURE
+                </th>
+
+                {providers.slice(0, 2).map((provider) => (
+                  <th
+                    key={provider.name}
+                    className="p-8 text-center"
+                  >
 
                     <img
                       src={provider.logo}
@@ -220,57 +99,97 @@ const HostingPage = () => {
 
                   </th>
                 ))}
+
               </tr>
+
             </thead>
 
             <tbody>
 
               <tr className="border-b border-gray-100">
-                <td className="p-8 font-semibold">Starting Price</td>
 
-                {providers.slice(0, 3).map((provider) => (
-                  <td className="p-8 text-center font-bold text-2xl">
+                <td className="p-8 font-semibold">
+                  Starting Price
+                </td>
+
+                {providers.slice(0, 2).map((provider) => (
+                  <td
+                    key={provider.name}
+                    className="p-8 text-center font-bold text-2xl"
+                  >
                     {provider.price}
                   </td>
                 ))}
+
               </tr>
 
               <tr className="border-b border-gray-100">
-                <td className="p-8 font-semibold">Rating</td>
 
-                {providers.slice(0, 3).map((provider) => (
-                  <td className="p-8 text-center">
+                <td className="p-8 font-semibold">
+                  Rating
+                </td>
+
+                {providers.slice(0, 2).map((provider) => (
+                  <td
+                    key={provider.name}
+                    className="p-8 text-center"
+                  >
                     <span className="font-bold text-2xl">
                       {provider.rating}
                     </span>
-                    <span className="text-gray-400"> / 5</span>
+
+                    <span className="text-gray-400">
+                      {' '} / 5
+                    </span>
                   </td>
                 ))}
+
               </tr>
 
               <tr className="border-b border-gray-100">
-                <td className="p-8 font-semibold">Best For</td>
 
-                {providers.slice(0, 3).map((provider) => (
-                  <td className="p-8 text-center text-gray-600">
+                <td className="p-8 font-semibold">
+                  Best For
+                </td>
+
+                {providers.slice(0, 2).map((provider) => (
+                  <td
+                    key={provider.name}
+                    className="p-8 text-center text-gray-600"
+                  >
                     {provider.category}
                   </td>
                 ))}
+
               </tr>
 
               <tr className="border-b border-gray-100">
-                <td className="p-8 font-semibold">Money Back Guarantee</td>
 
-                <td className="p-8 text-center text-gray-600">30 Days</td>
-                <td className="p-8 text-center text-gray-600">30 Days</td>
-                <td className="p-8 text-center text-gray-600">30 Days</td>
+                <td className="p-8 font-semibold">
+                  Money Back Guarantee
+                </td>
+
+                <td className="p-8 text-center text-gray-600">
+                  30 Days
+                </td>
+
+                <td className="p-8 text-center text-gray-600">
+                  30 Days
+                </td>
+
               </tr>
 
               <tr>
-                <td className="p-8 font-semibold">Link</td>
 
-                {providers.slice(0, 3).map((provider) => (
-                  <td className="p-8 text-center">
+                <td className="p-8 font-semibold">
+                  Link
+                </td>
+
+                {providers.slice(0, 2).map((provider) => (
+                  <td
+                    key={provider.name}
+                    className="p-8 text-center"
+                  >
 
                     <a
                       href={provider.link}
@@ -283,12 +202,15 @@ const HostingPage = () => {
 
                   </td>
                 ))}
+
               </tr>
 
             </tbody>
+
           </table>
 
         </div>
+
       </section>
 
       {/* DETAILED REVIEWS */}
@@ -301,6 +223,7 @@ const HostingPage = () => {
         <div className="space-y-10">
 
           {providers.map((provider, index) => (
+
             <div
               key={index}
               className={`bg-white rounded-3xl border shadow-sm overflow-hidden relative ${
@@ -328,6 +251,7 @@ const HostingPage = () => {
                   />
 
                   <div className="flex gap-1 mb-4">
+
                     {[1, 2, 3, 4].map((i) => (
                       <Star
                         key={i}
@@ -336,9 +260,11 @@ const HostingPage = () => {
                     ))}
 
                     <Star className="w-6 h-6 text-gray-300" />
+
                   </div>
 
                   <div className="flex items-center gap-4">
+
                     <span className="bg-green-50 text-green-700 px-4 py-1 rounded-full font-semibold">
                       {provider.category}
                     </span>
@@ -346,6 +272,7 @@ const HostingPage = () => {
                     <span className="text-3xl font-bold">
                       {provider.rating}
                     </span>
+
                   </div>
 
                 </div>
@@ -364,14 +291,18 @@ const HostingPage = () => {
                   <div className="grid md:grid-cols-2 gap-y-5">
 
                     {provider.features.map((feature, i) => (
+
                       <div
                         key={i}
                         className="flex items-center gap-3 text-xl text-gray-700"
                       >
+
                         <Check className="w-6 h-6 text-green-500" />
 
                         {feature}
+
                       </div>
+
                     ))}
 
                   </div>
@@ -386,6 +317,7 @@ const HostingPage = () => {
                   </div>
 
                   <div className="mb-8">
+
                     <span className="text-6xl font-extrabold text-[#0f172a]">
                       {provider.price.split('/')[0]}
                     </span>
@@ -393,6 +325,7 @@ const HostingPage = () => {
                     <span className="text-3xl text-gray-500">
                       /{provider.price.split('/')[1]}
                     </span>
+
                   </div>
 
                   <a
@@ -401,8 +334,11 @@ const HostingPage = () => {
                     rel="noopener noreferrer"
                     className="bg-green-600 hover:bg-green-700 transition text-white font-bold text-2xl px-10 py-5 rounded-2xl w-full flex items-center justify-center gap-3"
                   >
+
                     Know More Details
+
                     <Info className="w-5 h-5" />
+
                   </a>
 
                   <p className="text-gray-400 mt-5 text-lg">
@@ -412,14 +348,17 @@ const HostingPage = () => {
                 </div>
 
               </div>
+
             </div>
+
           ))}
 
         </div>
 
       </section>
+
     </div>
   );
 };
 
-export default HostingPage;
+export default VpsPage;

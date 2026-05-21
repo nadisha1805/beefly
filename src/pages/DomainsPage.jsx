@@ -6,7 +6,7 @@ const providers = [
     logo: "/logos/namecheap.png",
     rating: 4.8,
     badge: "Best Overall",
-    price: "₹89/yr",
+    price: "$9.99/yr",
     pros: [
       "Free WhoisGuard privacy",
       "Cheap .com renewals",
@@ -26,7 +26,7 @@ const providers = [
     logo: "/logos/cloudflare.png",
     rating: 4.7,
     badge: "Best for Developers",
-    price: "₹750/yr",
+    price: "$8.99/yr",
     pros: [
       "At-cost pricing",
       "Free WHOIS privacy",
@@ -46,7 +46,7 @@ const providers = [
     logo: "/logos/godaddy.png",
     rating: 4.2,
     badge: "Most Popular",
-    price: "₹99/yr",
+    price: "$1.19/yr",
     pros: [
       "Huge TLD selection",
       "Easy dashboard",
@@ -66,44 +66,44 @@ const providers = [
 const tlds = [
   {
     ext: ".com",
-    namecheap: "₹750",
-    cloudflare: "₹830",
-    godaddy: "₹99*",
+    namecheap: "$8.99",
+    cloudflare: "$9.99",
+    godaddy: "$1.19*",
   },
 
   {
     ext: ".in",
-    namecheap: "₹380",
+    namecheap: "$4.59",
     cloudflare: "N/A",
-    godaddy: "₹99*",
+    godaddy: "$1.19*",
   },
 
   {
     ext: ".net",
-    namecheap: "₹1,050",
-    cloudflare: "₹1,100",
-    godaddy: "₹599*",
+    namecheap: "$12.99",
+    cloudflare: "$13.49",
+    godaddy: "$6.99*",
   },
 
   {
     ext: ".org",
-    namecheap: "₹1,100",
-    cloudflare: "₹980",
-    godaddy: "₹699*",
+    namecheap: "$13.49",
+    cloudflare: "$11.99",
+    godaddy: "$8.49*",
   },
 
   {
     ext: ".io",
-    namecheap: "₹3,800",
-    cloudflare: "₹4,000",
-    godaddy: "₹2,999",
+    namecheap: "$45.99",
+    cloudflare: "$47.99",
+    godaddy: "$35.99",
   },
 
   {
     ext: ".co",
-    namecheap: "₹1,800",
-    cloudflare: "₹1,950",
-    godaddy: "₹999*",
+    namecheap: "$21.99",
+    cloudflare: "$23.99",
+    godaddy: "$11.99*",
   },
 ];
 
