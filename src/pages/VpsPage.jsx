@@ -3,6 +3,108 @@ import { Star, Check, Info } from 'lucide-react';
 
 const providers = [
   {
+    name: 'IONOS',
+    logo: '/logos/ionos.png',
+    price: '$1/yr',
+    rating: '4.2',
+    category: 'Domains',
+    description: 'Very cheap first-year offers for domains and hosting.',
+    features: [
+      'Personal Consultant',
+      '2 GB Email',
+      '1 Wildcard SSL',
+      '24/7 Support',
+    ],
+    best: true,
+    link: 'https://www.ionos.com',
+  },
+
+  {
+    name: 'Bluehost',
+    logo: '/logos/bluehost.png',
+    price: '$2.95/mo',
+    rating: '4.7',
+    category: 'Hosting',
+    description:
+      'Best overall hosting for beginners. Recommended by WordPress.org.',
+    features: [
+      'Free Domain for 1st Year',
+      '1-Click WordPress',
+      'Free SSL',
+      '24/7 Support',
+    ],
+    link: 'https://www.bluehost.com',
+  },
+
+  {
+    name: 'Hostinger',
+    logo: '/logos/hostinger.png',
+    price: '$1.99/mo',
+    rating: '4.8',
+    category: 'Hosting',
+    description:
+      'Unbeatable price to performance ratio with custom hPanel.',
+    features: [
+      'Managed WordPress',
+      'Weekly Backups',
+      'Free Migration',
+      'Unlimited SSL',
+    ],
+    link: 'https://www.hostinger.com',
+  },
+
+  {
+    name: 'SiteGround',
+    logo: '/logos/siteground.png',
+    price: '$3.99/mo',
+    rating: '4.9',
+    category: 'Hosting',
+    description:
+      'Premium managed WordPress hosting with Google Cloud infrastructure.',
+    features: [
+      'Google Cloud',
+      'SuperCacher',
+      'Daily Backups',
+      'Top-tier Support',
+    ],
+    link: 'https://www.siteground.com',
+  },
+
+  {
+    name: 'A2 Hosting',
+    logo: '/logos/a2.png',
+    price: '$2.99/mo',
+    rating: '4.5',
+    category: 'Hosting',
+    description:
+      'Known for their high-speed Turbo Servers and developer-friendly features.',
+    features: [
+      'Turbo Servers (20x faster)',
+      'Free Migration',
+      'Anytime Money Back',
+      '99.9% Uptime',
+    ],
+    link: 'https://www.a2hosting.com',
+  },
+
+  {
+    name: 'DreamHost',
+    logo: '/logos/dreamhost.png',
+    price: '$2.59/mo',
+    rating: '4.6',
+    category: 'Hosting',
+    description:
+      'Reliable, independent hosting with a 97-day money-back guarantee.',
+    features: [
+      'Address Monthly Billing',
+      'Unlimited Traffic',
+      'Free Domain',
+      'Automated Backups',
+    ],
+    link: 'https://www.dreamhost.com',
+  },
+
+  {
     name: 'InMotion',
     logo: '/logos/inmotion.png',
     price: '$2.29/mo',
@@ -16,7 +118,24 @@ const providers = [
       'Unlimited Bandwidth',
       'Security Suite',
     ],
-    best: true,
+    link: 'https://www.inmotionhosting.com',
+  },
+
+  {
+    name: 'GreenGeeks',
+    logo: '/logos/GreenGeeks.png',
+    price: '$2.95/mo',
+    rating: '4.7',
+    category: 'Hosting',
+    description:
+      'Eco-friendly hosting that matches 300% of energy use with renewables.',
+    features: [
+      '300% Green Energy',
+      'Free CDN',
+      'Free Nightly Backup',
+      'LSCache',
+    ],
+    link: 'https://www.greengeeks.com',
   },
 
   {
@@ -33,125 +152,45 @@ const providers = [
       'Pay As You Go',
       'Dedicated Firewalls',
     ],
+    link: 'https://www.cloudways.com',
   },
 
   {
-    name: 'DigitalOcean',
-    logo: '/logos/digitalocean.png',
-    price: '$4/mo',
-    rating: '4.8',
-    category: 'Cloud VPS',
+    name: 'Kinsta',
+    logo: '/logos/kinsta.png',
+    price: '$30/mo',
+    rating: '4.9',
+    category: 'Hosting',
     description:
-      'Developer-focused cloud infrastructure with scalable droplets.',
+      'Premium managed WordPress hosting powered by Google Cloud Platform with enterprise-grade performance.',
     features: [
-      'SSD Droplets',
-      '99.99% Uptime',
-      'Flexible Scaling',
-      'API Access',
+      'Google Cloud Platform C3D',
+      'Automatic Daily Backups',
+      'Free Cloudflare CDN',
+      'Free SSL & SSH Access',
     ],
-  },
-
-  {
-    name: 'Vultr',
-    logo: '/logos/vultr.png',
-    price: '$5/mo',
-    rating: '4.7',
-    category: 'Cloud VPS',
-    description:
-      'Affordable high-performance cloud compute with global locations.',
-    features: [
-      'Worldwide Servers',
-      'One Click Apps',
-      'Dedicated IP',
-      'Fast NVMe',
-    ],
-  },
-
-  {
-    name: 'Linode',
-    logo: '/logos/linode.png',
-    price: '$5/mo',
-    rating: '4.8',
-    category: 'Cloud VPS',
-    description:
-      'Reliable Linux cloud hosting popular among developers.',
-    features: [
-      'Advanced Networking',
-      'Kubernetes',
-      'DDoS Protection',
-      'Cloud Firewall',
-    ],
-  },
-
-  {
-    name: 'Kamatera',
-    logo: '/logos/Kamatera.png',
-    price: '$4/mo',
-    rating: '4.6',
-    category: 'Cloud Hosting',
-    description:
-      'Enterprise-grade cloud VPS with instant scalability.',
-    features: [
-      'Instant Scaling',
-      '30-Day Trial',
-      'Global Datacenters',
-      'Custom Servers',
-    ],
-  },
-
-  {
-    name: 'ScalaHosting',
-    logo: '/logos/scalahosting.png',
-    price: '$9.95/mo',
-    rating: '4.7',
-    category: 'Managed VPS',
-    description:
-      'Managed VPS hosting with SPanel and excellent security.',
-    features: [
-      'Free Migration',
-      'SShield Security',
-      'Daily Backups',
-      'Managed Support',
-    ],
-  },
-
-  {
-    name: 'A2 Hosting',
-    logo: '/logos/a2.png',
-    price: '$2.99/mo',
-    rating: '4.5',
-    category: 'VPS Hosting',
-    description:
-      'Turbo-powered VPS hosting optimized for speed.',
-    features: [
-      'Turbo Servers',
-      'Root Access',
-      'Anytime Refund',
-      'Free SSL',
-    ],
+    link: 'https://kinsta.com',
   },
 ];
 
-const VpsPage = () => {
+const HostingPage = () => {
   return (
     <div className="bg-[#f5f7f9] min-h-screen">
 
       {/* HERO */}
       <section className="py-24 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 text-center">
-
           <h1 className="text-6xl font-extrabold text-[#0f172a] mb-6">
-            VPS & Cloud Hosting
+            All Web Hosting Providers
           </h1>
 
           <p className="text-2xl text-gray-500">
-            High-performance servers for growing applications.
+            Complete list of reliable web hosting companies.
           </p>
-
         </div>
       </section>
 
-      {/* QUICK COMPARISON */}
+      {/* COMPARISON TABLE */}
       <section className="max-w-7xl mx-auto px-6 py-16">
 
         <h2 className="text-5xl font-bold text-[#0f172a] mb-10">
@@ -164,12 +203,9 @@ const VpsPage = () => {
 
             <thead className="border-b border-gray-200">
               <tr>
+                <th className="text-left p-8 text-gray-500">FEATURE</th>
 
-                <th className="text-left p-8 text-gray-500">
-                  FEATURE
-                </th>
-
-                {providers.slice(0, 2).map((provider) => (
+                {providers.slice(0, 3).map((provider) => (
                   <th key={provider.name} className="p-8 text-center">
 
                     <img
@@ -192,7 +228,7 @@ const VpsPage = () => {
               <tr className="border-b border-gray-100">
                 <td className="p-8 font-semibold">Starting Price</td>
 
-                {providers.slice(0, 2).map((provider) => (
+                {providers.slice(0, 3).map((provider) => (
                   <td className="p-8 text-center font-bold text-2xl">
                     {provider.price}
                   </td>
@@ -202,15 +238,12 @@ const VpsPage = () => {
               <tr className="border-b border-gray-100">
                 <td className="p-8 font-semibold">Rating</td>
 
-                {providers.slice(0, 2).map((provider) => (
+                {providers.slice(0, 3).map((provider) => (
                   <td className="p-8 text-center">
                     <span className="font-bold text-2xl">
                       {provider.rating}
                     </span>
-
-                    <span className="text-gray-400">
-                      {' '} / 5
-                    </span>
+                    <span className="text-gray-400"> / 5</span>
                   </td>
                 ))}
               </tr>
@@ -218,7 +251,7 @@ const VpsPage = () => {
               <tr className="border-b border-gray-100">
                 <td className="p-8 font-semibold">Best For</td>
 
-                {providers.slice(0, 2).map((provider) => (
+                {providers.slice(0, 3).map((provider) => (
                   <td className="p-8 text-center text-gray-600">
                     {provider.category}
                   </td>
@@ -226,28 +259,27 @@ const VpsPage = () => {
               </tr>
 
               <tr className="border-b border-gray-100">
-                <td className="p-8 font-semibold">
-                  Money Back Guarantee
-                </td>
+                <td className="p-8 font-semibold">Money Back Guarantee</td>
 
-                <td className="p-8 text-center text-gray-600">
-                  30 Days
-                </td>
-
-                <td className="p-8 text-center text-gray-600">
-                  30 Days
-                </td>
+                <td className="p-8 text-center text-gray-600">30 Days</td>
+                <td className="p-8 text-center text-gray-600">30 Days</td>
+                <td className="p-8 text-center text-gray-600">30 Days</td>
               </tr>
 
               <tr>
                 <td className="p-8 font-semibold">Link</td>
 
-                {providers.slice(0, 2).map((provider) => (
+                {providers.slice(0, 3).map((provider) => (
                   <td className="p-8 text-center">
 
-                    <button className="border-2 border-green-600 text-green-600 font-bold px-6 py-3 rounded-2xl hover:bg-green-600 hover:text-white transition">
+                    <a
+                      href={provider.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block border-2 border-green-600 text-green-600 font-bold px-6 py-3 rounded-2xl hover:bg-green-600 hover:text-white transition"
+                    >
                       Details
-                    </button>
+                    </a>
 
                   </td>
                 ))}
@@ -255,6 +287,7 @@ const VpsPage = () => {
 
             </tbody>
           </table>
+
         </div>
       </section>
 
@@ -295,7 +328,6 @@ const VpsPage = () => {
                   />
 
                   <div className="flex gap-1 mb-4">
-
                     {[1, 2, 3, 4].map((i) => (
                       <Star
                         key={i}
@@ -304,11 +336,9 @@ const VpsPage = () => {
                     ))}
 
                     <Star className="w-6 h-6 text-gray-300" />
-
                   </div>
 
                   <div className="flex items-center gap-4">
-
                     <span className="bg-green-50 text-green-700 px-4 py-1 rounded-full font-semibold">
                       {provider.category}
                     </span>
@@ -316,8 +346,8 @@ const VpsPage = () => {
                     <span className="text-3xl font-bold">
                       {provider.rating}
                     </span>
-
                   </div>
+
                 </div>
 
                 {/* CENTER */}
@@ -345,6 +375,7 @@ const VpsPage = () => {
                     ))}
 
                   </div>
+
                 </div>
 
                 {/* RIGHT */}
@@ -355,7 +386,6 @@ const VpsPage = () => {
                   </div>
 
                   <div className="mb-8">
-
                     <span className="text-6xl font-extrabold text-[#0f172a]">
                       {provider.price.split('/')[0]}
                     </span>
@@ -363,28 +393,33 @@ const VpsPage = () => {
                     <span className="text-3xl text-gray-500">
                       /{provider.price.split('/')[1]}
                     </span>
-
                   </div>
 
-                  <button className="bg-green-600 hover:bg-green-700 transition text-white font-bold text-2xl px-10 py-5 rounded-2xl w-full flex items-center justify-center gap-3">
+                  <a
+                    href={provider.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-600 hover:bg-green-700 transition text-white font-bold text-2xl px-10 py-5 rounded-2xl w-full flex items-center justify-center gap-3"
+                  >
                     Know More Details
-
                     <Info className="w-5 h-5" />
-                  </button>
+                  </a>
 
                   <p className="text-gray-400 mt-5 text-lg">
                     30-day money-back guarantee
                   </p>
 
                 </div>
+
               </div>
             </div>
           ))}
 
         </div>
+
       </section>
     </div>
   );
 };
 
-export default VpsPage;
+export default HostingPage;

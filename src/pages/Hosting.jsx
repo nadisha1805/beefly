@@ -16,6 +16,7 @@ const providers = [
       '24/7 Support',
     ],
     best: true,
+    link: 'https://www.ionos.com',
   },
 
   {
@@ -32,6 +33,7 @@ const providers = [
       'Free SSL',
       '24/7 Support',
     ],
+    link: 'https://www.bluehost.com',
   },
 
   {
@@ -48,6 +50,7 @@ const providers = [
       'Free Migration',
       'Unlimited SSL',
     ],
+    link: 'https://www.hostinger.com',
   },
 
   {
@@ -64,6 +67,7 @@ const providers = [
       'Daily Backups',
       'Top-tier Support',
     ],
+    link: 'https://www.siteground.com',
   },
 
   {
@@ -80,6 +84,7 @@ const providers = [
       'Anytime Money Back',
       '99.9% Uptime',
     ],
+    link: 'https://www.a2hosting.com',
   },
 
   {
@@ -96,6 +101,7 @@ const providers = [
       'Free Domain',
       'Automated Backups',
     ],
+    link: 'https://www.dreamhost.com',
   },
 
   {
@@ -112,6 +118,7 @@ const providers = [
       'Unlimited Bandwidth',
       'Security Suite',
     ],
+    link: 'https://www.inmotionhosting.com',
   },
 
   {
@@ -128,6 +135,7 @@ const providers = [
       'Free Nightly Backup',
       'LSCache',
     ],
+    link: 'https://www.greengeeks.com',
   },
 
   {
@@ -144,6 +152,7 @@ const providers = [
       'Pay As You Go',
       'Dedicated Firewalls',
     ],
+    link: 'https://www.cloudways.com',
   },
 
   {
@@ -160,6 +169,7 @@ const providers = [
       'Free Cloudflare CDN',
       'Free SSL & SSH Access',
     ],
+    link: 'https://kinsta.com',
   },
 ];
 
@@ -261,9 +271,16 @@ const HostingPage = () => {
 
                 {providers.slice(0, 3).map((provider) => (
                   <td className="p-8 text-center">
-                    <button className="border-2 border-green-600 text-green-600 font-bold px-6 py-3 rounded-2xl hover:bg-green-600 hover:text-white transition">
+
+                    <a
+                      href={provider.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block border-2 border-green-600 text-green-600 font-bold px-6 py-3 rounded-2xl hover:bg-green-600 hover:text-white transition"
+                    >
                       Details
-                    </button>
+                    </a>
+
                   </td>
                 ))}
               </tr>
@@ -378,10 +395,15 @@ const HostingPage = () => {
                     </span>
                   </div>
 
-                  <button className="bg-green-600 hover:bg-green-700 transition text-white font-bold text-2xl px-10 py-5 rounded-2xl w-full flex items-center justify-center gap-3">
+                  <a
+                    href={provider.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-600 hover:bg-green-700 transition text-white font-bold text-2xl px-10 py-5 rounded-2xl w-full flex items-center justify-center gap-3"
+                  >
                     Know More Details
                     <Info className="w-5 h-5" />
-                  </button>
+                  </a>
 
                   <p className="text-gray-400 mt-5 text-lg">
                     30-day money-back guarantee

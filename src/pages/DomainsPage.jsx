@@ -17,7 +17,7 @@ const providers = [
       "Support can be slow",
       "Upsells at checkout",
     ],
-    link: "#",
+    link: "https://www.namecheap.com",
     color: "from-green-500 to-emerald-600",
   },
 
@@ -37,7 +37,7 @@ const providers = [
       "Limited TLD selection",
       "No ICANN reseller",
     ],
-    link: "#",
+    link: "https://www.cloudflare.com",
     color: "from-emerald-500 to-green-600",
   },
 
@@ -58,7 +58,7 @@ const providers = [
       "Too many upsells",
       "Privacy costs extra",
     ],
-    link: "#",
+    link: "https://www.godaddy.com",
     color: "from-green-600 to-emerald-700",
   },
 ];
@@ -182,7 +182,7 @@ export default function DomainsPage() {
       <section className="max-w-5xl mx-auto px-4 py-12">
 
         <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">
-          Top Domain Registrars in 2025
+          Top Domain Registrars in 2026
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">

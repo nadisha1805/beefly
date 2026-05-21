@@ -37,7 +37,7 @@ const CookiesPolicy = () => {
             </h2>
 
             <p className="text-2xl mb-6">
-              At Axiomor, we use cookies to:
+              At Beefly, we use cookies to:
             </p>
 
             <ul className="list-disc pl-10 text-2xl space-y-4 leading-relaxed">
@@ -137,7 +137,7 @@ const CookiesPolicy = () => {
 
             <p className="text-2xl leading-relaxed">
               If you have any questions about our use of cookies,
-              please contact us at privacy@axiomor.online
+              please contact us at privacy@beefly.online
             </p>
           </section>
 

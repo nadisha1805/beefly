@@ -1,9 +1,9 @@
 import React from 'react';
 import { Star, Check, Info } from 'lucide-react';
 
-import namecheapLogo from "../assets/logos/namecheap.png";
-import bluehostLogo from "../assets/logos/bluehost.png";
-import sitegroundLogo from "../assets/logos/siteground.png";
+import namecheapLogo from "/logos/namecheap.png";
+import bluehostLogo from "/logos/bluehost.png";
+import sitegroundLogo from "/logos/siteground.png";
 
 const ProviderCards = () => {
   return (
@@ -12,6 +12,7 @@ const ProviderCards = () => {
 
         {/* HEADING */}
         <div className="text-center mb-12">
+
           <h2 className="text-3xl font-bold text-gray-900">
             Detailed Provider Reviews
           </h2>
@@ -19,6 +20,7 @@ const ProviderCards = () => {
           <p className="mt-4 text-lg text-gray-600">
             In-depth look at features, pricing, and performance.
           </p>
+
         </div>
 
         <div className="space-y-8">
@@ -36,15 +38,18 @@ const ProviderCards = () => {
 
               {/* LOGO */}
               <div className="h-16 w-32 flex items-center justify-center mb-4">
+
                 <img
                   src={namecheapLogo}
                   alt="Namecheap"
                   className="h-14 object-contain"
                 />
+
               </div>
 
               {/* RATING */}
               <div className="flex items-center space-x-1 mb-2">
+
                 {[1, 2, 3, 4, 5].map(i => (
                   <Star
                     key={i}
@@ -59,11 +64,13 @@ const ProviderCards = () => {
                 <span className="text-sm font-semibold text-gray-700 ml-2">
                   4.8
                 </span>
+
               </div>
 
               <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-green-50 text-green-700">
                 Domains
               </span>
+
             </div>
 
             {/* CENTER */}
@@ -100,6 +107,7 @@ const ProviderCards = () => {
                 </div>
 
               </div>
+
             </div>
 
             {/* RIGHT */}
@@ -126,21 +134,28 @@ const ProviderCards = () => {
                   </span>
 
                 </div>
+
               </div>
 
-              <button className="inline-flex items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700 shadow-sm h-10 px-4 py-2 w-full mb-2">
+              <a
+                href="https://www.namecheap.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700 shadow-sm h-10 px-4 py-2 w-full mb-2"
+              >
 
                 Know More Details
 
                 <Info className="ml-2 w-4 h-4" />
 
-              </button>
+              </a>
 
               <span className="text-xs text-gray-400 text-center block">
                 30-day money-back guarantee
               </span>
 
             </div>
+
           </div>
 
           {/* CARD 2 */}
@@ -150,11 +165,13 @@ const ProviderCards = () => {
             <div className="flex-shrink-0 w-full md:w-48 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 pb-6 md:pb-0 md:pr-6">
 
               <div className="h-16 w-32 flex items-center justify-center mb-4">
+
                 <img
                   src={bluehostLogo}
                   alt="Bluehost"
                   className="h-14 object-contain"
                 />
+
               </div>
 
               <div className="flex items-center space-x-1 mb-2">
@@ -179,6 +196,7 @@ const ProviderCards = () => {
               <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-green-50 text-green-700">
                 Hosting
               </span>
+
             </div>
 
             {/* CENTER */}
@@ -215,6 +233,7 @@ const ProviderCards = () => {
                 </div>
 
               </div>
+
             </div>
 
             {/* RIGHT */}
@@ -241,21 +260,28 @@ const ProviderCards = () => {
                   </span>
 
                 </div>
+
               </div>
 
-              <button className="inline-flex items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700 shadow-sm h-10 px-4 py-2 w-full mb-2">
+              <a
+                href="https://www.bluehost.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700 shadow-sm h-10 px-4 py-2 w-full mb-2"
+              >
 
                 Know More Details
 
                 <Info className="ml-2 w-4 h-4" />
 
-              </button>
+              </a>
 
               <span className="text-xs text-gray-400 text-center block">
                 30-day money-back guarantee
               </span>
 
             </div>
+
           </div>
 
           {/* CARD 3 */}
@@ -265,11 +291,13 @@ const ProviderCards = () => {
             <div className="flex-shrink-0 w-full md:w-48 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 pb-6 md:pb-0 md:pr-6">
 
               <div className="h-16 w-32 flex items-center justify-center mb-4">
+
                 <img
                   src={sitegroundLogo}
                   alt="SiteGround"
                   className="h-14 object-contain"
                 />
+
               </div>
 
               <div className="flex items-center space-x-1 mb-2">
@@ -294,6 +322,7 @@ const ProviderCards = () => {
               <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-green-50 text-green-700">
                 Hosting
               </span>
+
             </div>
 
             {/* CENTER */}
@@ -330,6 +359,7 @@ const ProviderCards = () => {
                 </div>
 
               </div>
+
             </div>
 
             {/* RIGHT */}
@@ -356,21 +386,28 @@ const ProviderCards = () => {
                   </span>
 
                 </div>
+
               </div>
 
-              <button className="inline-flex items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700 shadow-sm h-10 px-4 py-2 w-full mb-2">
+              <a
+                href="https://www.siteground.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700 shadow-sm h-10 px-4 py-2 w-full mb-2"
+              >
 
                 Know More Details
 
                 <Info className="ml-2 w-4 h-4" />
 
-              </button>
+              </a>
 
               <span className="text-xs text-gray-400 text-center block">
                 30-day money-back guarantee
               </span>
 
             </div>
+
           </div>
 
         </div>

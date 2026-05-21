@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
             </h2>
 
             <p>
-              This Privacy Policy explains how Axiomor collects, uses,
+              This Privacy Policy explains how Beefly collects, uses,
               and protects your information when you visit our website.
               By using our site, you agree to the collection and use of
               information in accordance with this policy.

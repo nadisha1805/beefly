@@ -3,6 +3,7 @@ import React from "react";
 const providers = [
   {
     name: "Namecheap",
+    link: "https://www.namecheap.com",
     logo: "/logos/namecheap.png",
     price: "$9.98/yr",
     rating: "4.8 / 5",
@@ -11,6 +12,7 @@ const providers = [
   },
   {
     name: "GoDaddy",
+    link: "https://www.godaddy.com",
     logo: "/logos/godaddy.png",
     price: "$11.99/yr",
     rating: "4.5 / 5",
@@ -19,6 +21,7 @@ const providers = [
   },
   {
     name: "Dynadot",
+    link: "https://www.dynadot.com",
     logo: "/logos/dynadot.png",
     price: "$8.99/yr",
     rating: "4.7 / 5",
@@ -37,7 +40,7 @@ const ComparisonTable = () => {
 
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold text-gray-900">
-            Top Domain Registrars in 2025
+            Top Domain Registrars in 2026
           </h2>
 
           <p className="mt-4 text-lg text-gray-600">
@@ -150,9 +153,14 @@ const ComparisonTable = () => {
                     key={provider.name}
                     className="px-8 py-8 text-center"
                   >
-                    <button className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 px-6 py-2 rounded-xl font-semibold">
+                    <a
+                      href={provider.link}
+                      target="_blank"
+                     rel="noopener noreferrer"
+                     className="inline-block border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 px-6 py-2 rounded-xl font-semibold"
+                     >
                       Details
-                    </button>
+                     </a>
                   </td>
                 ))}
               </tr>

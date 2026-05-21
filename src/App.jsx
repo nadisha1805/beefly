@@ -19,6 +19,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import CookiesPolicy from './pages/CookiesPolicy';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import TermsPage from './pages/TermsPage';
 function App() {
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -54,6 +55,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         
         <Route path="/contact" element={<ContactPage />} />
+
+        <Route path="/terms" element={<TermsPage />} />
 
       </Routes>
 

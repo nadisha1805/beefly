@@ -1,71 +1,72 @@
 import React from "react";
+import { Star } from "lucide-react";
 
 const reviews = [
   {
     name: "Rahul Sharma",
     location: "Delhi, India",
-    avatar: "👨‍💻",
+    avatar: "RS",
     rating: 5,
     provider: "Hostinger",
     title: "Best hosting I've tried in 4 years",
-    text: "Switched from a local Indian host to Hostinger last year. Website loads in under 1.5 seconds now — my bounce rate dropped 30%. The hPanel is intuitive and their live chat actually helped me solve an SSL issue within 10 minutes.",
+    text: "Switched from a local Indian host and the speed difference is incredible. Support team is responsive and uptime has been excellent.",
     date: "March 2025",
   },
 
   {
     name: "Priya Nair",
-    location: "Bangalore, India",
-    avatar: "👩‍🎨",
+    location: "Mumbai, India",
+    avatar: "PN",
     rating: 5,
     provider: "Namecheap",
-    title: "Finally, domain privacy that doesn’t cost extra",
-    text: "Transferred all 6 of my client domains to Namecheap and saved a lot on WHOIS privacy. DNS management is powerful once you learn it.",
+    title: "Perfect for domains and small projects",
+    text: "Bought multiple domains and the dashboard is super easy to use. Pricing is transparent and renewals are affordable.",
     date: "February 2025",
   },
 
   {
-    name: "Vikram Iyer",
-    location: "Chennai, India",
-    avatar: "🧑‍💼",
+    name: "Arjun Mehta",
+    location: "Bangalore, India",
+    avatar: "AM",
     rating: 4,
-    provider: "DigitalOcean",
-    title: "Perfect for my SaaS app",
-    text: "Running a Node.js SaaS on a small Droplet. The one-click app deploys saved me hours. Billing can be confusing initially.",
-    date: "April 2025",
-  },
-
-  {
-    name: "Ananya Gupta",
-    location: "Mumbai, India",
-    avatar: "👩‍💻",
-    rating: 5,
-    provider: "SiteGround",
-    title: "Worth every rupee for WooCommerce",
-    text: "My WooCommerce store became significantly faster after moving to SiteGround. Their backup system saved my store once.",
+    provider: "Cloudflare",
+    title: "Amazing performance and security",
+    text: "Cloudflare improved my website speed significantly. DNS setup was smooth and DDoS protection works really well.",
     date: "January 2025",
   },
 
   {
-    name: "Karan Mehta",
-    location: "Pune, India",
-    avatar: "👨‍🔬",
-    rating: 4,
-    provider: "Cloudflare",
-    title: "Best registrar pricing",
-    text: "Cloudflare domains are incredibly cheap because they sell at wholesale rates. Their free CDN also improved my performance.",
-    date: "March 2025",
-  },
-
-  {
-    name: "Meghna Das",
-    location: "Kolkata, India",
-    avatar: "👩‍🏫",
+    name: "Rohan Das",
+    location: "Mumbai, India",
+    avatar: "RD",
     rating: 5,
-    provider: "Bluehost",
-    title: "Easiest WordPress setup",
-    text: "Bluehost made my WordPress setup extremely easy. Their support helped me configure emails and SSL certificates quickly.",
-    date: "February 2025",
-  },
+    provider: "Hostinger",
+    title: "Unbeatable value for WordPress",
+    text: "Switched my blog to Hostinger and the LiteSpeed caching made a massive difference in loading times. The dashboard is clean and automated backups give me complete peace of mind.",
+    date: "March 2026",
+},
+
+{
+    name: "Priya Sharma",
+    location: "Delhi, India",
+    avatar: "PS",
+    rating: 4,
+    provider: "Spaceship",
+    title: "Incredibly cheap domain renewals",
+    text: "I was tired of hidden fees at renewal. Spaceship offers transparent pricing and free WHOIS privacy. The interface takes a little getting used to, but the savings are worth it.",
+    date: "February 2026",
+},
+
+{
+    name: "Vikram Malhotra",
+    location: "Hyderabad, India",
+    avatar: "VM",
+    rating: 5,
+    provider: "DigitalOcean",
+    title: "Perfect VPS infrastructure for developers",
+    text: "Deploying a budget Droplet was incredibly seamless. The performance is highly predictable, the API is robust, and the documentation made configuring my production node effortless.",
+    date: "April 2026",
+}
 ];
 
 const providerRatings = [
@@ -114,18 +115,17 @@ const providerRatings = [
 
 function StarRating({ rating }) {
   return (
-    <div className="flex gap-1 mt-1">
+    <div className="flex gap-1 mt-2">
       {[1, 2, 3, 4, 5].map((s) => (
-        <span
+        <Star
           key={s}
+          size={16}
           className={
             s <= rating
-              ? "text-yellow-400"
+              ? "fill-yellow-400 text-yellow-400"
               : "text-gray-300"
           }
-        >
-          ★
-        </span>
+        />
       ))}
     </div>
   );
@@ -133,161 +133,124 @@ function StarRating({ rating }) {
 
 export default function ReviewsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
-
-      {/* HERO */}
-
-      <section className="relative overflow-hidden pt-24 pb-20 px-4 bg-white border-b border-gray-100">
-
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-gray-50 pointer-events-none" />
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-
-          <span className="inline-block bg-green-50 border border-green-200 text-green-600 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-            🐝 Real User Reviews
-          </span>
-
-          <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight text-gray-900">
-            Honest Reviews from{" "}
-            <span className="text-green-600">
-              Indian Users
-            </span>
+    <div className="bg-gray-50 min-h-screen">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div className="text-center mb-14">
+          <h1 className="text-5xl font-bold text-gray-900">
+            Latest Reviews
           </h1>
 
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            These are verified reviews from real users across India — not paid testimonials.
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Real user experiences and expert ratings for top hosting and domain providers.
           </p>
-
         </div>
-      </section>
 
-      {/* PROVIDER OVERVIEW */}
-
-      <section className="max-w-6xl mx-auto px-4 py-14">
-
-        <h2 className="text-3xl font-bold mb-8 text-gray-900">
-          Provider Ratings Overview
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-          {providerRatings.map((p) => (
-
+        {/* Reviews Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {reviews.map((review, index) => (
             <div
-              key={p.name}
-              className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              key={index}
+              className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-300"
             >
-
-              <div className="flex items-center gap-3 mb-5">
-
-                <img
-                  src={p.icon}
-                  alt={p.name}
-                  className="h-12 w-12 object-contain"
-                />
-
-                <span className="font-bold text-xl text-gray-900">
-                  {p.name}
-                </span>
-
-              </div>
-
-              <div className="flex items-end justify-between">
-
-                <div>
-
-                  <p className="text-4xl font-black text-green-600">
-                    {p.score}
-                  </p>
-
-                  <StarRating
-                    rating={Math.round(p.score)}
-                  />
-
-                </div>
-
-                <p className="text-gray-500 text-sm">
-                  {p.reviews.toLocaleString()} reviews
-                </p>
-
-              </div>
-
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* REVIEWS GRID */}
-
-      <section className="max-w-6xl mx-auto px-4 pb-24">
-
-        <h2 className="text-3xl font-bold mb-8 text-gray-900">
-          Latest Reviews
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8">
-
-          {reviews.map((r, i) => (
-
-            <div
-              key={i}
-              className="bg-white border border-gray-100 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
-
-              {/* TOP */}
-
-              <div className="flex items-start justify-between mb-5">
-
+              
+              <div className="flex items-center justify-between mb-6">
+                
                 <div className="flex items-center gap-4">
-
-                  <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-2xl">
-                    {r.avatar}
+                  
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    {review.avatar}
                   </div>
 
                   <div>
+                    <h3 className="font-semibold text-gray-900 text-lg">
+                      {review.name}
+                    </h3>
 
-                    <p className="font-bold text-gray-900">
-                      {r.name}
+                    <p className="text-sm text-gray-500">
+                      {review.location}
                     </p>
-
-                    <p className="text-gray-500 text-sm">
-                      {r.location}
-                    </p>
-
                   </div>
-
                 </div>
 
-                <span className="bg-green-50 text-green-600 text-xs font-bold px-3 py-1 rounded-full border border-green-200">
-                  {r.provider}
+                <span className="text-xs font-semibold bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                  {review.provider}
                 </span>
-
               </div>
 
-              {/* STARS */}
+              <h4 className="text-xl font-bold text-gray-900 mb-2">
+                {review.title}
+              </h4>
 
-              <StarRating rating={r.rating} />
+              <StarRating rating={review.rating} />
 
-              {/* TITLE */}
-
-              <h3 className="font-bold text-xl text-gray-900 mt-4 mb-3">
-                {r.title}
-              </h3>
-
-              {/* TEXT */}
-
-              <p className="text-gray-600 leading-relaxed">
-                {r.text}
+              <p className="mt-5 text-gray-600 leading-relaxed">
+                {review.text}
               </p>
 
-              {/* DATE */}
-
-              <p className="text-gray-400 text-sm mt-5">
-                {r.date}
+              <p className="mt-6 text-sm text-gray-400">
+                {review.date}
               </p>
-
             </div>
           ))}
+        </div>
+
+        {/* Provider Ratings */}
+        <div className="mt-24">
+          
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900">
+              Provider Ratings
+            </h2>
+
+            <p className="mt-4 text-gray-600">
+              Trusted ratings based on performance, support, and value.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {providerRatings.map((provider, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl border border-gray-100 p-8 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                
+                <div className="flex items-center justify-between mb-6">
+                  
+                  <img
+                    src={provider.icon}
+                    alt={provider.name}
+                    className="h-10 object-contain"
+                  />
+
+                  <span className="text-2xl font-bold text-gray-900">
+                    {provider.score}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 mb-4">
+                  <Star className="fill-yellow-400 text-yellow-400" size={18} />
+                  
+                  <p className="font-medium text-gray-700">
+                    Excellent Rating
+                  </p>
+                </div>
+
+                <p className="text-gray-500 mb-6">
+                  Based on {provider.reviews}+ verified customer reviews.
+                </p>
+
+                <a
+                  href={`https://${provider.name.toLowerCase()}.com`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition"
+                >
+                  Visit {provider.name}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

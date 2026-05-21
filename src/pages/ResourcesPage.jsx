@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   BookOpen,
   Globe,
@@ -14,59 +15,64 @@ const resources = [
     title: "Domain Guides",
     desc: "Learn how to choose, register, and manage the perfect domain name for your website.",
     links: [
-      "Best Domain Registrars",
-      "How to Buy a Domain",
-      "Domain Transfer Guide",
+      { title: "Best Domain Registrars", path: "/blog/1" },
+      { title: "How to Buy a Domain", path: "/blog/2" },
+      { title: "Domain Transfer Guide", path: "/blog/3" },
     ],
   },
+
   {
     icon: Server,
     title: "Web Hosting",
     desc: "Understand hosting types, performance, uptime, and which hosting is best for beginners.",
     links: [
-      "Shared vs VPS Hosting",
-      "Best Web Hosting Providers",
-      "Beginner Hosting Guide",
+      { title: "Shared vs VPS Hosting", path: "/blog/4" },
+      { title: "Best Web Hosting Providers", path: "/blog/5" },
+      { title: "Beginner Hosting Guide", path: "/blog/6" },
     ],
   },
+
   {
     icon: Cpu,
     title: "VPS & Cloud",
     desc: "Explore scalable VPS and cloud hosting solutions for developers and businesses.",
     links: [
-      "Cheap VPS Hosting",
-      "Cloud Hosting Explained",
-      "Managed VPS Guide",
+      { title: "Cheap VPS Hosting", path: "/blog/4" },
+      { title: "Cloud Hosting Explained", path: "/blog/5" },
+      { title: "Managed VPS Guide", path: "/blog/6" },
     ],
   },
+
   {
     icon: ShieldCheck,
     title: "Security & SSL",
     desc: "Protect your website with SSL certificates, backups, and security best practices.",
     links: [
-      "Free SSL Guide",
-      "Website Security Tips",
-      "Backup Solutions",
+      { title: "Free SSL Guide", path: "/blog/2" },
+      { title: "Website Security Tips", path: "/blog/3" },
+      { title: "Backup Solutions", path: "/blog/1" },
     ],
   },
+
   {
     icon: FileText,
     title: "Website Building",
     desc: "Step-by-step tutorials for creating and growing your website online.",
     links: [
-      "How to Start a Blog",
-      "WordPress Setup Guide",
-      "SEO Basics for Beginners",
+      { title: "How to Start a Blog", path: "/blog/4" },
+      { title: "WordPress Setup Guide", path: "/blog/5" },
+      { title: "SEO Basics for Beginners", path: "/blog/6" },
     ],
   },
+
   {
     icon: BookOpen,
     title: "Expert Tutorials",
     desc: "In-depth tutorials and comparisons to help you make better hosting decisions.",
     links: [
-      "Best Hosting for WordPress",
-      "How to Migrate Hosting",
-      "Hosting Comparison Guide",
+      { title: "Best Hosting for WordPress", path: "/blog/1" },
+      { title: "How to Migrate Hosting", path: "/blog/2" },
+      { title: "Hosting Comparison Guide", path: "/blog/3" },
     ],
   },
 ];
@@ -74,10 +80,11 @@ const resources = [
 const ResourcesPage = () => {
   return (
     <div className="bg-[#f5f7f9] min-h-screen">
-      
+
       {/* HERO */}
       <section className="bg-[#f3f5f7] border-b border-gray-200 py-24">
         <div className="max-w-6xl mx-auto px-6 text-center">
+
           <h1 className="text-5xl font-extrabold text-[#0f172a] mb-6">
             Resources & Guides
           </h1>
@@ -86,12 +93,15 @@ const ResourcesPage = () => {
             Educational content to help you build a better web presence.
             No sales pitches, just learning.
           </p>
+
         </div>
       </section>
 
       {/* RESOURCE GRID */}
       <section className="max-w-7xl mx-auto px-6 py-20">
+
         <div className="grid md:grid-cols-2 gap-10">
+
           {resources.map((item, index) => {
             const Icon = item.icon;
 
@@ -100,6 +110,7 @@ const ResourcesPage = () => {
                 key={index}
                 className="bg-white rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-md transition"
               >
+
                 <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mb-8">
                   <Icon className="w-8 h-8 text-green-600" />
                 </div>
@@ -113,19 +124,25 @@ const ResourcesPage = () => {
                 </p>
 
                 <div className="space-y-5">
+
                   {item.links.map((link, i) => (
-                    <div
+                    <Link
                       key={i}
-                      className="text-green-600 text-2xl font-semibold hover:text-green-700 cursor-pointer transition"
+                      to={link.path}
+                      className="block text-green-600 text-2xl font-semibold hover:text-green-700 transition"
                     >
-                      {link}
-                    </div>
+                      {link.title}
+                    </Link>
                   ))}
+
                 </div>
+
               </div>
             );
           })}
+
         </div>
+
       </section>
     </div>
   );
